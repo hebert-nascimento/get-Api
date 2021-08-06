@@ -1,0 +1,57 @@
+body{
+	margin-top: 20px;
+	font-family: 'NOTO SANS CJK JP BOLD', verdana, helvetica, lato!important;
+}
+
+.AnimacaoApi{
+	animation-name: fade;
+	animation-delay: 0.5s;
+	animation-duration: 850ms;
+	animation-fill-mode: backwards; 
+}
+.alerta{
+	width: 80%;
+	height: 100%;
+	text-align: center;
+	float: right;
+	margin: auto;
+	display: none;
+	animation-name: alerta;
+	animation-delay: 0.2s;
+	animation-duration: 550ms;
+	animation-fill-mode: backwards;
+}
+
+.alerta::after{
+	content: 'Busca Efetuada!';
+	color: green;
+}
+/*TABELA*/
+@keyframes fade{
+	from
+	{
+		opacity: 0;
+		transform: translateX(35%);
+	}
+	to
+	{
+		opacity: 1;
+		transform: translateX(0%);
+	}
+}
+
+/*MENSAGEM DE ALERTA*/
+@keyframes alerta{
+ 	0%{
+ 		transform: translateY(100%);
+ 	}
+ 	40%{
+ 		transform: translateY(0%);	
+ 	}
+ 	80%{
+ 		transform: translateY(-10%);
+ 	}
+ 	100%{
+ 		transform: translateY(-10%);
+ 	}
+}
